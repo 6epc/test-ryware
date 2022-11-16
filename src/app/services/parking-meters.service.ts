@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, filter, map, Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs';
 
 export interface ParkingMeter {
   id?: number;
@@ -8,7 +8,6 @@ export interface ParkingMeter {
   status: string
   usages: number
 }
-
 @Injectable({
   providedIn: 'root'
 })
