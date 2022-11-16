@@ -1,0 +1,39 @@
+<div class="max-w-lg mx-auto">
+  <h1 class="text-4xl font-extrabold text-violet-800 text-center mb-4 mt-4">Parking Meters</h1>
+
+  <table class="table-fixed border-collapse table-fexed w-full text-lg">
+    <thead>
+      <tr class="uppercase border-b border-violet-300 font-medium text-violet-500 bg-violet-100">
+        <th class="w-2/12 pr-4 pl-8 pt-3 pb-3 text-left">id</th>
+        <th class="pr-8 pl-4 pt-3 pb-3 text-left">address</th>
+      </tr>
+    </thead>
+    <tbody class="bg-white ">
+      <tr
+        *ngFor="let item of data"
+        (click)="navigate(item)"
+        class="
+            cursor-pointer
+            ease-in
+            duration-200
+            border-b
+            border-violet-300
+            text-violet-500
+            bg-violet-100
+            hover:bg-violet-400
+            hover:text-white
+            active:bg-violet-500">
+
+        <td class="pr-4 pl-8 pt-3 pb-3">
+          {{item.id}}
+        </td>
+        <td class="pr-8 pl-4 pt-3 pb-3">
+          {{item.address}}
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <app-parking-meters-form (onAdd)="updateData($event)"></app-parking-meters-form>
+</div>

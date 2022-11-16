@@ -1,0 +1,41 @@
+<h2 class="text-3xl font-bold text-violet-800 text-center mt-9">Add parking meter</h2>
+<form [formGroup]="form" (ngSubmit)="submit()" class="max-w-lg mx-auto">
+  <div class="mb-5 form-control">
+    <input type="text" formControlName="address" placeholder="Address"
+      class="w-full font-light p-2 border-b-2 border-violet-300 placeholder-gray-300 shadow-sm focus:outline-none focus:border-violet-500">
+    <!-- validation address -->
+    <div class="text-xs text-red-500" *ngIf="address?.invalid && (address?.dirty || address?.touched)">
+      <small *ngIf="address?.errors?.['required']">Field is requered</small>
+      <small *ngIf="address?.errors?.['minlength']">
+        {{address?.errors?.['minlength'].actualLength}} of {{address?.errors?.['minlength'].requiredLength}}
+      </small>
+    </div>
+  </div>
+  <div class="mb-5 form-control">
+    <input type="text" formControlName="status" placeholder="Status: enabled/disabled"
+      class="w-full font-light p-2 border-b-2 border-violet-300 placeholder-gray-300 shadow-sm focus:outline-none focus:border-violet-500">
+    <!-- validation status -->
+    <div class="text-xs text-red-500" *ngIf="status?.invalid && (status?.dirty || status?.touched)">
+      <small *ngIf="status?.errors?.['required']">Field is requered</small>
+      <small *ngIf="status?.errors?.['minlength']">
+        {{status?.errors?.['minlength'].actualLength}} of {{status?.errors?.['minlength'].requiredLength}}
+      </small>
+    </div>
+  </div>
+  <div class="mb-5 form-control">
+    <input type="text" formControlName="usages" placeholder="Usages: numbers only"
+      class="w-full font-light p-2 border-b-2 border-violet-300 placeholder-gray-300 shadow-sm focus:outline-none focus:border-violet-500">
+    <!-- validation usage -->
+    <div class="text-xs text-red-500" *ngIf="usages?.invalid && (usages?.dirty || usages?.touched)">
+      <small *ngIf="usages?.errors?.['required']">Field is requered</small>
+      <small *ngIf="usages?.errors?.['pattern']">Numbers only</small>
+    </div>
+  </div>
+
+  <button
+    [disabled]="form.invalid"
+    type="submit"
+    class="disabled:opacity-30 border border-violet-300 bg-violet-500 text-white rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-violet-600 focus:outline-none focus:shadow-outline">
+    Add parking meter
+  </button>
+</form>

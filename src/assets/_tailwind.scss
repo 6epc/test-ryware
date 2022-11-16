@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-control input.ng-invalid.ng-touched {
+  @apply border-red-500
+}
+

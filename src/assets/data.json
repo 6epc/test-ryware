@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "address": "Virginia, Mclean, 3780 Perine Street",
+    "status": "enabled",
+    "usages": "4"
+  },
+  {
+    "id": "2",
+    "address": "Michigan, Battle Creek, 743 Echo Lane",
+    "status": "disabled",
+    "usages": "0"
+  },
+  {
+    "id": "3",
+    "address": "Illinois, Chicago, 234 Farland Street",
+    "status": "enabled",
+    "usages": "15"
+  }
+]
