@@ -3,8 +3,6 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ParkingMeter, ParkingMetersService } from 'src/app/services/parking-meters.service';
 
-// import { ParkingMeter, ParkingMetersService } from 'src/app/services/parking-meters.service';
-
 @Component({
   selector: 'app-parking-meters-list',
   templateUrl: './parking-meters-list.component.html',
